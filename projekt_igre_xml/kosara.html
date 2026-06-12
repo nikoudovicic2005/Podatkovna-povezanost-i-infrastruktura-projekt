@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Košara</title>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Košara</h1>
+            <p>Pregled dodanih videoigara</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Početna</a>
+        <a href="igre.xml">XML prikaz</a>
+    </nav>
+
+    <main>
+        <section class="uvod">
+            <h2>Moja košara</h2>
+            <p>Ovdje se nalaze igre koje si dodao u košaru.</p>
+        </section>
+
+        <section id="sadrzajKosare" class="igre"></section>
+
+        <h2 id="ukupno"></h2>
+
+        <button onclick="isprazniKosaru()">Isprazni košaru</button>
+    </main>
+
+    <footer>
+        <p>Niko Udovičić / Podatkovna povezanost i digitalna infrastruktura</p>
+    </footer>
+
+    <script>
+        function prikaziKosaru() {
+            let kosara = JSON.parse(localStorage.getItem("kosara")) || [];
+            let sadrzaj = document.getElementById("sadrzajKosare");
+            let ukupnoTekst = document.getElementById("ukupno");
+
+            sadrzaj.innerHTML = "";
+
+            if (kosara.length === 0) {
+                sadrzaj.innerHTML = "<p>Košara je prazna.</p>";
+                ukupnoTekst.textContent = "";
+                return;
+            }
+
+            let ukupno = 0;
+
+            for (let i = 0; i < kosara.length; i++) {
+                ukupno += kosara[i].cijena;
+
+                sadrzaj.innerHTML += `
+                    <article class="kartica">
+                        <h3>${kosara[i].naziv}</h3>
+                        <p class="cijena">${kosara[i].cijena} €</p>
+                        <button onclick="obrisiIgru(${i})">Ukloni</button>
+                    </article>
+                `;
+            }
+
+            ukupnoTekst.textContent = "Ukupno: " + ukupno.toFixed(2) + " €";
+        }
+
+        function obrisiIgru(index) {
+            let kosara = JSON.parse(localStorage.getItem("kosara")) || [];
+            kosara.splice(index, 1);
+            localStorage.setItem("kosara", JSON.stringify(kosara));
+            prikaziKosaru();
+        }
+
+        function isprazniKosaru() {
+            localStorage.removeItem("kosara");
+            prikaziKosaru();
+        }
+
+        prikaziKosaru();
+    </script>
+</body>
+</html>

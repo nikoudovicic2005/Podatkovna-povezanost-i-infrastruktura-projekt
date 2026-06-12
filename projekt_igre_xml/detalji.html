@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji igre</title>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Početna</a>
+    <a href="igre.xml">XML prikaz</a>
+    <a href="kosara.html">Košara</a>
+</nav>
+
+<header>
+    <div>
+        <h1 id="nazivIgre">Detalji igre</h1>
+        <p>Više informacija o odabranoj videoigri</p>
+    </div>
+</header>
+
+<main>
+    <section class="detalji-kartica">
+        <img id="slikaIgre" src="" alt="Slika igre">
+
+        <div>
+            <h2 id="naslov"></h2>
+            <p><strong>Žanr:</strong> <span id="zanr"></span></p>
+            <p><strong>Platforma:</strong> <span id="platforma"></span></p>
+            <p><strong>Cijena:</strong> <span id="cijena"></span></p>
+            <p><strong>Godina izlaska:</strong> <span id="godina"></span></p>
+            <p><strong>Ocjena:</strong> <span id="ocjena"></span></p>
+            <p id="opis"></p>
+
+            <button id="dodajBtn">Dodaj u košaru</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Projekt iz XML-a i web tehnologija</p>
+</footer>
+
+<script>
+    const igre = {
+        gta5: {
+            naziv: "Grand Theft Auto V",
+            zanr: "Akcijska avantura",
+            platforma: "PC / PlayStation / Xbox",
+            cijena: 29.99,
+            godina: "2013.",
+            ocjena: "9.5/10",
+            slika: "slike/gta5.jpg",
+            opis: "Grand Theft Auto V je popularna akcijska igra otvorenog svijeta u kojoj igrač istražuje grad, izvršava misije i prati priču više glavnih likova."
+        },
+        fc25: {
+            naziv: "EA Sports FC 25",
+            zanr: "Sportska",
+            platforma: "PC / PlayStation / Xbox",
+            cijena: 69.99,
+            godina: "2024.",
+            ocjena: "8/10",
+            slika: "slike/fc25.jpg",
+            opis: "EA Sports FC 25 je nogometna simulacija s klubovima, reprezentacijama, karijerom i online načinima igranja."
+        },
+        codbo6: {
+            naziv: "Call of Duty: Black Ops 6",
+            zanr: "FPS",
+            platforma: "PC / PlayStation / Xbox",
+            cijena: 79.99,
+            godina: "2024.",
+            ocjena: "8.5/10",
+            slika: "slike/codbo6.jpg",
+            opis: "Call of Duty: Black Ops 6 je pucačina iz prvog lica s kampanjom, multiplayerom i brzim akcijskim načinima igranja."
+        },
+        forza5: {
+            naziv: "Forza Horizon 5",
+            zanr: "Utrke",
+            platforma: "PC / Xbox",
+            cijena: 49.99,
+            godina: "2021.",
+            ocjena: "9/10",
+            slika: "slike/forza5.jpg",
+            opis: "Forza Horizon 5 je trkaća igra otvorenog svijeta s velikim izborom automobila, utrka i istraživanja."
+        },
+        hogwarts: {
+            naziv: "Hogwarts Legacy",
+            zanr: "Akcijski RPG",
+            platforma: "PC / PlayStation / Xbox",
+            cijena: 59.99,
+            godina: "2023.",
+            ocjena: "8.5/10",
+            slika: "slike/hogwarts.jpg",
+            opis: "Hogwarts Legacy je akcijski RPG smješten u čarobnjački svijet, gdje igrač istražuje Hogwarts i koristi magiju."
+        },
+        godofwar: {
+            naziv: "God of War",
+            zanr: "Akcijska avantura",
+            platforma: "PlayStation / PC",
+            cijena: 49.99,
+            godina: "2018.",
+            ocjena: "9.5/10",
+            slika: "slike/godofwar.jpg",
+            opis: "God of War prati Kratosa i njegova sina Atreusa kroz mitološki svijet pun borbe, istraživanja i emocionalne priče."
+        },
+        cyberpunk2077: {
+            naziv: "Cyberpunk 2077",
+            zanr: "RPG",
+            platforma: "PC / PlayStation / Xbox",
+            cijena: 39.99,
+            godina: "2020.",
+            ocjena: "8.5/10",
+            slika: "slike/cyberpunk2077.jpg",
+            opis: "Cyberpunk 2077 je RPG igra smještena u futuristički grad Night City, s velikom slobodom izbora i razvojem lika."
+        },
+        rdr2: {
+            naziv: "Red Dead Redemption 2",
+            zanr: "Akcijska avantura",
+            platforma: "PC / PlayStation / Xbox",
+            cijena: 59.99,
+            godina: "2018.",
+            ocjena: "10/10",
+            slika: "slike/rdr2.jpg",
+            opis: "Red Dead Redemption 2 je igra otvorenog svijeta smještena na Divlji zapad, poznata po snažnoj priči i detaljnom svijetu."
+        },
+        minecraft: {
+            naziv: "Minecraft",
+            zanr: "Sandbox",
+            platforma: "PC / PlayStation / Xbox / Switch",
+            cijena: 29.99,
+            godina: "2011.",
+            ocjena: "9/10",
+            slika: "slike/minecraft.jpg",
+            opis: "Minecraft je sandbox igra u kojoj igrač gradi, istražuje, preživljava i stvara vlastite svjetove od blokova."
+        },
+        eldenring: {
+            naziv: "Elden Ring",
+            zanr: "Akcijski RPG",
+            platforma: "PC / PlayStation / Xbox",
+            cijena: 69.99,
+            godina: "2022.",
+            ocjena: "10/10",
+            slika: "slike/eldenring.jpg",
+            opis: "Elden Ring je zahtjevan akcijski RPG otvorenog svijeta s borbom, istraživanjem i fantasy atmosferom."
+        },
+        rocketleague: {
+    naziv: "Rocket League",
+    zanr: "Sportska / Arcade",
+    platforma: "PC / PlayStation / Xbox / Switch",
+    cijena: 19.99,
+    godina: "2015.",
+    ocjena: "8.5/10",
+    slika: "slike/rocketleague.jpg",
+    opis: "Rocket League je popularna sportska igra koja kombinira nogomet i automobile. Igrači upravljaju vozilima i pokušavaju postići gol protivničkoj ekipi."
+},
+        fortnite: {
+            naziv: "Fortnite",
+            zanr: "Battle Royale",
+            platforma: "PC / PlayStation / Xbox / Switch",
+            cijena: 0,
+            godina: "2017.",
+            ocjena: "8/10",
+            slika: "slike/fortnite.jpg",
+            opis: "Fortnite je popularna online battle royale igra u kojoj se igrači bore, grade i natječu do posljednjeg preživjelog."
+        }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("igra");
+    const igra = igre[id];
+
+    if (igra) {
+        document.getElementById("nazivIgre").textContent = igra.naziv;
+        document.getElementById("naslov").textContent = igra.naziv;
+        document.getElementById("zanr").textContent = igra.zanr;
+        document.getElementById("platforma").textContent = igra.platforma;
+        document.getElementById("cijena").textContent = igra.cijena.toFixed(2) + " €";
+        document.getElementById("godina").textContent = igra.godina;
+        document.getElementById("ocjena").textContent = igra.ocjena;
+        document.getElementById("opis").textContent = igra.opis;
+        document.getElementById("slikaIgre").src = igra.slika;
+
+        document.getElementById("dodajBtn").onclick = function() {
+            let kosara = JSON.parse(localStorage.getItem("kosara")) || [];
+            kosara.push({
+                naziv: igra.naziv,
+                cijena: igra.cijena
+            });
+            localStorage.setItem("kosara", JSON.stringify(kosara));
+            alert(igra.naziv + " je dodana u košaru!");
+        };
+    } else {
+        document.querySelector("main").innerHTML = "<h2>Igra nije pronađena.</h2>";
+    }
+</script>
+
+</body>
+</html>

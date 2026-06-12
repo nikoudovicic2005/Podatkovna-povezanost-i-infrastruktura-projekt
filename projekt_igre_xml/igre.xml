@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="kolekcija_igara.xsl"?>
+<kolekcija>
+    <igra>
+        <naziv>God of War</naziv>
+        <zanr>Akcijska avantura</zanr>
+        <platforma>PlayStation / PC</platforma>
+        <cijena>49.99 €</cijena>
+    </igra>
+    <igra>
+        <naziv>Cyberpunk 2077</naziv>
+        <zanr>RPG</zanr>
+        <platforma>PC / PlayStation / Xbox</platforma>
+        <cijena>39.99 €</cijena>
+    </igra>
+    <igra>
+        <naziv>Red Dead Redemption 2</naziv>
+        <zanr>Akcijska avantura</zanr>
+        <platforma>PC / PlayStation / Xbox</platforma>
+        <cijena>59.99 €</cijena>
+    </igra>
+    <igra>
+        <naziv>Minecraft</naziv>
+        <zanr>Sandbox</zanr>
+        <platforma>PC / PlayStation / Xbox / Switch</platforma>
+        <cijena>29.99 €</cijena>
+    </igra>
+    <igra>
+        <naziv>Elden Ring</naziv>
+        <zanr>Akcijski RPG</zanr>
+        <platforma>PC / PlayStation / Xbox</platforma>
+        <cijena>69.99 €</cijena>
+    </igra>
+    <igra>
+        <naziv>Rocket League</naziv>
+        <zanr>Sports</zanr>
+        <platforma>PC / PlayStation / Xbox / Switch</platforma>
+        <cijena>0.00 €</cijena>
+    </igra>
+    <igra>
+        <naziv>Grand Theft Auto V</naziv>
+        <zanr>Akcijska avantura</zanr>
+        <platforma>PC / PlayStation / Xbox</platforma>
+        <cijena>29.99 €</cijena>
+    </igra>
+
+    <igra>
+        <naziv>EA Sports FC 25</naziv>
+        <zanr>Sportska</zanr>
+        <platforma>PC / PlayStation / Xbox</platforma>
+        <cijena>69.99 €</cijena>
+    </igra>
+
+    <igra>
+        <naziv>Call of Duty: Black Ops 6</naziv>
+        <zanr>FPS</zanr>
+        <platforma>PC / PlayStation / Xbox</platforma>
+        <cijena>79.99 €</cijena>
+    </igra>
+
+    <igra>
+        <naziv>Forza Horizon 5</naziv>
+        <zanr>Utrke</zanr>
+        <platforma>PC / Xbox</platforma>
+        <cijena>49.99 €</cijena>
+    </igra>
+
+    <igra>
+        <naziv>Hogwarts Legacy</naziv>
+        <zanr>Akcijski RPG</zanr>
+        <platforma>PC / PlayStation / Xbox</platforma>
+        <cijena>59.99 €</cijena>
+    </igra>
+
+    <igra>
+    <naziv>Fortnite</naziv>
+    <zanr>Battle Royale</zanr>
+    <platforma>PC / PlayStation / Xbox / Switch</platforma>
+    <cijena>0.00 €</cijena>
+</igra>
+</kolekcija>

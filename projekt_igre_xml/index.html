@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolekcija videoigara</title>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Početna</a>
+    <a href="igre.xml">XML prikaz</a>
+</nav>
+
+<header>
+    <div class="header-sadrzaj">
+        <h1>Kolekcija videoigara</h1>
+        <p>Web trgovina s popularnim videoigrama</p>
+
+        <div class="pretraga">
+            <input type="text" id="searchInput" placeholder="Pretraži igru...">
+        </div>
+    </div>
+
+    <a href="kosara.html" class="kosara">
+        🛒 Košara: <span id="brojKosare">0</span>
+    </a>
+</header>
+
+
+
+<main>
+    <section class="uvod">
+        <h1>Ponuda igara</h1>
+        <h2>Odaberi igru i dodaj je u košaru.</h2>
+    </section>
+
+    <section class="igre">
+
+        <article class="kartica">
+            <img src="slike/fortnite.jpg" alt="Fortnite">
+            <h3>Fortnite</h3>
+            <p>Žanr: Battle Royale</p>
+            <p>Platforma: PC / PlayStation / Xbox / Switch</p>
+            <p class="cijena">0.00 €</p>
+            <button onclick="dodajUKosaru('Fortnite', 0)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=fortnite" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/gta5.jpg" alt="GTA V">
+            <h3>Grand Theft Auto V</h3>
+            <p>Žanr: Akcijska avantura</p>
+            <p>Platforma: PC / PlayStation / Xbox</p>
+            <p class="cijena">29.99 €</p>
+            <button onclick="dodajUKosaru('Grand Theft Auto V', 29.99)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=gta5" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/fc25.jpg" alt="EA Sports FC 25">
+            <h3>EA Sports FC 25</h3>
+            <p>Žanr: Sportska</p>
+            <p>Platforma: PC / PlayStation / Xbox</p>
+            <p class="cijena">69.99 €</p>
+            <button onclick="dodajUKosaru('EA Sports FC 25', 69.99)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=fc25" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/codbo6.jpg" alt="Call of Duty">
+            <h3>Call of Duty: Black Ops 6</h3>
+            <p>Žanr: FPS</p>
+            <p>Platforma: PC / PlayStation / Xbox</p>
+            <p class="cijena">79.99 €</p>
+            <button onclick="dodajUKosaru('Call of Duty: Black Ops 6', 79.99)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=codbo6" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/forza5.jpg" alt="Forza Horizon 5">
+            <h3>Forza Horizon 5</h3>
+            <p>Žanr: Utrke</p>
+            <p>Platforma: PC / Xbox</p>
+            <p class="cijena">49.99 €</p>
+            <button onclick="dodajUKosaru('Forza Horizon 5', 49.99)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=forza5" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/hogwarts.jpg" alt="Hogwarts Legacy">
+            <h3>Hogwarts Legacy</h3>
+            <p>Žanr: Akcijski RPG</p>
+            <p>Platforma: PC / PlayStation / Xbox</p>
+            <p class="cijena">59.99 €</p>
+            <button onclick="dodajUKosaru('Hogwarts Legacy', 59.99)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=hogwarts" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/godofwar.jpg" alt="God of War">
+            <h3>God of War</h3>
+            <p>Žanr: Akcijska avantura</p>
+            <p>Platforma: PlayStation / PC</p>
+            <p class="cijena">49.99 €</p>
+            <button onclick="dodajUKosaru('God of War', 49.99)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=godofwar" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/cyberpunk2077.jpg" alt="Cyberpunk 2077">
+            <h3>Cyberpunk 2077</h3>
+            <p>Žanr: RPG</p>
+            <p>Platforma: PC / PlayStation / Xbox</p>
+            <p class="cijena">39.99 €</p>
+            <button onclick="dodajUKosaru('Cyberpunk 2077', 39.99)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=cyberpunk2077" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/rdr2.jpg" alt="Red Dead Redemption 2">
+            <h3>Red Dead Redemption 2</h3>
+            <p>Žanr: Akcijska avantura</p>
+            <p>Platforma: PC / PlayStation / Xbox</p>
+            <p class="cijena">59.99 €</p>
+            <button onclick="dodajUKosaru('Red Dead Redemption 2', 59.99)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=rdr2" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/minecraft.jpg" alt="Minecraft">
+            <h3>Minecraft</h3>
+            <p>Žanr: Sandbox</p>
+            <p>Platforma: PC / PlayStation / Xbox / Switch</p>
+            <p class="cijena">29.99 €</p>
+            <button onclick="dodajUKosaru('Minecraft', 29.99)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=minecraft" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/eldenring.jpg" alt="Elden Ring">
+            <h3>Elden Ring</h3>
+            <p>Žanr: Akcijski RPG</p>
+            <p>Platforma: PC / PlayStation / Xbox</p>
+            <p class="cijena">69.99 €</p>
+            <button onclick="dodajUKosaru('Elden Ring', 69.99)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=eldenring" class="detalji-btn">Detalji</a>
+        </article>
+
+        <article class="kartica">
+            <img src="slike/rocketleague.jpg" alt="Rocket League">
+            <h3>Rocket League</h3>
+            <p>Žanr: Sportska</p>
+            <p>Platforma: PC / PlayStation / Xbox / Switch</p>
+            <p class="cijena">0.00 €</p>
+            <button onclick="dodajUKosaru('Rocket League', 0)">Dodaj u košaru</button>
+            <a href="detalji.html?igra=rocketleague" class="detalji-btn">Detalji</a>
+        </article>
+
+    </section>
+</main>
+
+<footer>
+    <p>Niko Udovičić / Podatkovna povezanost i digitalna infrastruktura</p>
+</footer>
+
+<script>
+    function dodajUKosaru(imeIgre, cijena) {
+        let kosara = JSON.parse(localStorage.getItem("kosara")) || [];
+
+        let igra = {
+            naziv: imeIgre,
+            cijena: cijena
+        };
+
+        kosara.push(igra);
+        localStorage.setItem("kosara", JSON.stringify(kosara));
+
+        prikaziBrojKosare();
+
+        alert(imeIgre + " je dodana u košaru!");
+    }
+
+    function prikaziBrojKosare() {
+        let kosara = JSON.parse(localStorage.getItem("kosara")) || [];
+        document.getElementById("brojKosare").textContent = kosara.length;
+    }
+
+    prikaziBrojKosare();
+
+    const searchInput = document.getElementById("searchInput");
+
+    searchInput.addEventListener("keyup", function() {
+        let filter = searchInput.value.toLowerCase();
+        let kartice = document.querySelectorAll(".kartica");
+
+        kartice.forEach(function(kartica) {
+            let naziv = kartica.querySelector("h3").textContent.toLowerCase();
+
+            if (naziv.includes(filter)) {
+                kartica.style.display = "block";
+            } else {
+                kartica.style.display = "none";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
